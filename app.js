@@ -157,16 +157,23 @@ $("prevBtn")?.addEventListener("click", () => {
 });
 
 $("playBtn")?.addEventListener("click", () => {
-  if (!playerReady) return;
+    if (!playerReady) return;
 
-  if (player.getPlayerState() === 1) {
-    player.pauseVideo();
-  } else if (player.getPlayerState() === 5) {
-    playMusic(currentIndex);
-  } else {
-    player.playVideo();
-  }
+    const state = player.getPlayerState();
+
+    if (state === 1) {
+        player.pauseVideo();
+    } else if (state === 2) {
+        player.playVideo();
+    } else {
+        player.loadPlaylist({
+            list: "PLNPLRFUe-AUo",
+            listType: "playlist",
+            index: 0
+        });
+    }
 });
+
 
 // Painel administrativo
 $("adminToggle")?.addEventListener("click", () => {
