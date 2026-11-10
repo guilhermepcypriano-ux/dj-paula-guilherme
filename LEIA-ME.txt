@@ -1,0 +1,14 @@
+DJ VIRTUAL PAULA & GUILHERME — primeira versão
+
+1. Esta é uma página estática para colocar em uma pasta /dj/ do repositório GitHub Pages.
+2. Envie index.html, style.css, app.js e a pasta assets inteira.
+3. Acesse depois em https://paulaeguilhermeparasempre.com/dj/ (se o domínio estiver apontado para este GitHub Pages).
+
+IMPORTANTE SOBRE ESTA VERSÃO
+- O visual, equalizador, formulário de pedidos e painel de aprovação já funcionam localmente no navegador.
+- A fila ainda é local: os pedidos feitos em celulares diferentes NÃO aparecem no computador. Para isso precisamos conectar um banco online (por exemplo Supabase/Firebase) e configurar as chaves do projeto.
+- Para tocar, o DJ precisa aprovar uma música que tenha um link válido do YouTube. O player é incorporado do YouTube; o YouTube pode exibir anúncios em players incorporados. YouTube Premium não garante remover anúncios em todos os contextos de incorporação. Não há garantia de reprodução sem comerciais nesta integração.
+- O botão tocar/pausar depende do navegador e de interação do usuário. Teste áudio e conexão com a caixa de som antes do evento.
+- A ilustração incluída é uma arte estilizada gerada a partir da foto fornecida.
+
+Próxima etapa: conectar uma fila compartilhada em tempo real para os convidados e o computador do DJ.

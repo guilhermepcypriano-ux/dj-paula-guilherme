@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050806"><title>Paula & Guilherme • Wedding Party 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="laser l1"></div><div class="laser l2"></div><div class="laser l3"></div>
+<header class="top"><div class="brand"><span class="heart">♡</span><span>PAULA <i>&</i> GUILHERME</span></div><div class="tag">WEDDING PARTY <b>2026</b></div></header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><p class="eyebrow">A NOSSA FESTA • 14.11.2026</p><h1>A pista é <span>nossa.</span></h1><p class="sub">Escolha uma música, entre no clima e dance com a gente!</p>
+      <div class="live"><span class="dot"></span> A FESTA ESTÁ NO AR</div>
+    </div>
+    <div class="portrait-wrap"><div class="ring"></div><img src="assets/paula-guilherme-dj.png" alt="Ilustração de Paula e Guilherme dançando na festa"></div>
+  </section>
+  <section class="player panel">
+    <div class="now"><div class="vinyl"><span>▶</span></div><div><small>TOCANDO AGORA</small><h2 id="currentTitle">Nossa festa começa aqui!</h2><p id="currentArtist">Escolha uma música na fila</p></div></div>
+    <div class="equalizer" aria-label="Equalizador animado"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="player-controls"><button id="prevBtn" aria-label="Anterior">|◀</button><button id="playBtn" class="play" aria-label="Reproduzir ou pausar">▶</button><button id="nextBtn" aria-label="Próxima">▶|</button><span class="player-note" id="playerStatus">Aguardando DJ iniciar</span></div>
+    <div id="youtubePlayer" class="youtube-frame"></div>
+  </section>
+  <section class="lower">
+    <section class="panel request-panel"><div class="section-title"><div><small>VOCÊ ESCOLHE O SOM</small><h2>Peça sua música <span>♪</span></h2></div><div class="music-icon">♫</div></div>
+      <form id="requestForm"><label for="guestName">Seu nome</label><input id="guestName" maxlength="35" placeholder="Como podemos te chamar?" required><label for="songName">Música e artista</label><input id="songName" maxlength="100" placeholder="Ex.: Evidências — Chitãozinho & Xororó" required><label for="youtubeUrl">Link do YouTube (opcional)</label><input id="youtubeUrl" type="url" placeholder="Cole o link da música"><button class="primary" type="submit">ENVIAR PEDIDO <span>➜</span></button><p class="hint" id="formMessage" aria-live="polite">Seu pedido vai para aprovação do DJ.</p></form>
+    </section>
+    <section class="panel queue-panel"><div class="section-title"><div><small>PRÓXIMOS HITS</small><h2>Fila de músicas</h2></div><span class="count" id="queueCount">0</span></div><ol id="queueList" class="queue-list"><li class="empty">A fila está esperando os primeiros pedidos.</li></ol></section>
+  </section>
+  <section class="admin panel"><div class="admin-head"><div><small>ÁREA DO ORGANIZADOR</small><h2>Controle do DJ</h2></div><button id="adminToggle" class="ghost">Abrir painel</button></div><div id="adminArea" hidden><p class="hint">Aprove os pedidos e cole o link do YouTube para tocar. O navegador pode exigir um clique para iniciar o áudio.</p><div id="pendingList"></div><div class="admin-add"><input id="manualTitle" placeholder="Adicionar música manualmente"><input id="manualUrl" type="url" placeholder="Link do YouTube"><button id="manualAdd" class="primary">Adicionar à fila</button></div></div></section>
+</main>
+<footer>Feito com amor para celebrar Paula & Guilherme <span>♡</span></footer>
+<script src="https://www.youtube.com/iframe_api"></script><script src="app.js"></script>
+</body></html>
