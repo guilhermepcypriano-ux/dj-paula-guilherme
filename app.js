@@ -187,6 +187,12 @@ window.onYouTubeIframeAPIReady = () => {
     events: {
       onReady: () => {
         playerReady = true;
+
+        player.loadPlaylist({
+          list: "PLNPLRFUe-AUo",
+          listType: "playlist",
+          index: 0
+      });
       },
       onStateChange: event => {
         if (event.data === YT.PlayerState.ENDED) {
