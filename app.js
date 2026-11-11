@@ -184,8 +184,8 @@ $("adminToggle")?.addEventListener("click", () => {
 // Player YouTube
 window.onYouTubeIframeAPIReady = () => {
   player = new YT.Player("youtubePlayer", {
-    height: "1",
-    width: "1",
+    height: "200",
+    width: "200",
     videoId: "",
     playerVars: {
       playsinline: 1,
@@ -195,11 +195,8 @@ window.onYouTubeIframeAPIReady = () => {
       onReady: () => {
         playerReady = true;
 
-        player.loadPlaylist({
-          list: "PLNPLRFUe-AUo",
-          listType: "playlist",
-          index: 0
-      });
+        $("playerStatus").textContent =
+          "Player pronto";
       },
       onStateChange: event => {
         if (event.data === YT.PlayerState.ENDED) {
