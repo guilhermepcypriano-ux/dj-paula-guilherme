@@ -181,7 +181,7 @@ $("playBtn")?.addEventListener("click", () => {
            $("playerStatus").textContent = "Adicione uma música à playlist" ;
         }
     }
-
+});
 // Painel administrativo
 $("adminToggle")?.addEventListener("click", () => {
   $("adminArea").hidden = !$("adminArea").hidden;
