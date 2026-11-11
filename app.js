@@ -16,12 +16,21 @@ function savePlaylist() {
 function videoId(url) {
   try {
     const u = new URL(url);
-    if (u.hostname.includes("youtu.be")) return u.pathname.slice(1);
-    if (u.searchParams.get("v")) return u.searchParams.get("v");
-    const videoPath =
-    u.pathname.split("/embed/")[1];
-  return videoPath ?
-    videoPath.split("/")[0] ; null;
+
+    if (u.hostname.includes("youtu.be")) {
+      return u.pathname.slice(1);
+    }
+
+    if (u.searchParams.get("v")) {
+      return u.searchParams.get("v");
+    }
+
+    const videoPath = u.pathname.split("/embed/")[1];
+
+    return videoPath ? videoPath.split("/")[0] : null;
+
+  } catch (error) {
+    return null;
   }
 }
 
