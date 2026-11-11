@@ -1,4 +1,4 @@
-/ DJ PAULA & GUILHERME
+// DJ PAULA & GUILHERME
 // Playlist permanente no navegador - sem Firebase
 
 let queue = [];
