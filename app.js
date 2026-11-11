@@ -166,14 +166,12 @@ $("playBtn")?.addEventListener("click", () => {
     } else if (state === 2) {
         player.playVideo();
     } else {
-        player.loadPlaylist({
-            list: "PLNPLRFUe-AUo",
-            listType: "playlist",
-            index: 0
-        });
+        if (playlist.length > 0) {
+            playMusic(0)
+             } else {
+           $("playerStatus").textContent = "Adicione uma música à playlist" ;
+        }
     }
-});
-
 
 // Painel administrativo
 $("adminToggle")?.addEventListener("click", () => {
