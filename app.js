@@ -102,10 +102,19 @@ function playMusic(index) {
   $("currentTitle").textContent = music.title;
   $("currentArtist").textContent = "Playlist do DJ";
 
-  if (playerReady) {
-    player.loadVideoById(videoId(music.url));
-    $("playerStatus").textContent = "Reproduzindo";
+  if (player && playerReady) {
+  const id = videoId(music.url);
+
+  if (!id) {
+    $("playerStatus").textContent = "Link inválido";
+    return;
   }
+
+  player.loadVideoById(id);
+  player.playVideo();
+
+  $("playerStatus").textContent = "Reproduzindo";
+}
 }
 
 function renderQueue() {
